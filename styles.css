@@ -1,0 +1,118 @@
+/* ====== ESTILOS GENERALES ====== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background: #4a90e2;
+    color: white;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+footer {
+    background: #ddd;
+    padding: 10px;
+    margin-top: 30px;
+    border-top: 2px solid #ccc;
+}
+
+/* ====== TITULOS CON ANIMACIÓN ====== */
+.titulo-animado {
+    animation: moverTitulo 2s infinite alternate;
+}
+
+@keyframes moverTitulo {
+    0% { transform: translateY(0); color: white; }
+    50% { transform: translateY(-10px); color: yellow; }
+    100% { transform: translateY(0); color: white; }
+}
+
+/* ====== BOTONES CON ANIMACIÓN ====== */
+.btn {
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #0077cc;
+    transform: scale(1.1);
+}
+
+/* ====== TABLA DE PRODUCTOS ====== */
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+th {
+    background: #4a90e2;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e1f5fe;
+    transition: 0.3s;
+}
+
+/* ====== IMÁGENES DE EMPLEADOS ====== */
+.empleados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.empleado {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 180px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    transition: transform 0.4s;
+}
+
+.empleado img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.empleado:hover {
+    transform: scale(1.05);
+}
+
+.empleado img:hover {
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 0 0 15px rgba(74,144,226,0.7);
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
